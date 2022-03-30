@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/static/precache-manifest.7c4c9e2677ea21f5d3cb40582815d588.js"
+  "/static/precache-manifest.2ee167581064ad0a6db58657d35a413d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "web-notifications"});
@@ -23,6 +23,16 @@ self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
+});
+self.addEventListener('push', e => {
+  const data = e.data.json();
+  console.log('SW data is ', data)
+  self.registration.showNotification(data.title, {
+      body: data.body,
+      icon: 'favicon.png',
+      image: data.image
+  });
+
 });
 
 /**
