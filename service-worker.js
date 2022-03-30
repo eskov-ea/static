@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/static/precache-manifest.e3b12ba4e7c1c75d70ad86800c9af468.js"
+  "/static/precache-manifest.940882305ba773b9d0b98206f5a7b3e9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "web-notifications"});
@@ -34,7 +34,6 @@ self.addEventListener('push', e => {
   });
 
 });
-
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
  * requests for URLs in the manifest.
