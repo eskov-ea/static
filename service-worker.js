@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/static/precache-manifest.36a0a99c619485cd32faddf3c0806475.js"
+  "/static/precache-manifest.e3b12ba4e7c1c75d70ad86800c9af468.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "web-notifications"});
