@@ -14,8 +14,11 @@ self.addEventListener("push", (e) => {
 });
 
 self.addEventListener("message", (e) => {
-
+  console.log("Got message from main script");
+  console.log("Message is: ", e.data);
 });
+
+
 
 self.addEventListener(
   "notificationclick",
