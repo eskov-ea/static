@@ -1,4 +1,4 @@
-const visible = true;
+let visible = true;
 
 self.addEventListener("push", (e) => {
   const data = e.data.json();
@@ -14,6 +14,7 @@ self.addEventListener("push", (e) => {
 });
 
 self.addEventListener("message", (e) => {
+  console.log(e.data);
   visible = e.data;
 });
 self.addEventListener("notificationclick", function (event) {
