@@ -14,18 +14,12 @@ self.addEventListener("push", (e) => {
 });
 
 self.addEventListener("message", (e) => {
-  console.log("Got message from main script");
-  console.log("Message is: ", e.data);
+  visible = e.data;
 });
-
-
-
-self.addEventListener(
-  "notificationclick",
-  function (event) {
+self.addEventListener("notificationclick", function (event) {
     event.notification.close();
 
-    if (hidden) {
+    if (!visible) {
       clients.openWindow("/static/");
     }
   },
